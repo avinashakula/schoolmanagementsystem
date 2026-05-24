@@ -270,7 +270,11 @@ export default function Notifications() {
           borderRadius: 3,
         }}
       >
-        <Typography variant="h6" mb={2}>
+        <Typography
+          variant="h6"
+          mb={2}
+          style={{ textAlign: "left", marginBottom: "10px" }}
+        >
           Notifications List
         </Typography>
 

@@ -332,7 +332,11 @@ export default function Users() {
           borderRadius: 3,
         }}
       >
-        <Typography variant="h6" mb={3}>
+        <Typography
+          variant="h6"
+          mb={3}
+          style={{ textAlign: "left", marginBottom: "10px" }}
+        >
           Users List
         </Typography>
 
