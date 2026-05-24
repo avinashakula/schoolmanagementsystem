@@ -18,8 +18,10 @@
     "axios": "^1.15.2",
     "bootstrap": "^5.3.8",
     "bootstrap-icons": "^1.13.1",
+    "quill": "^2.0.3",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
+    "react-quill-new": "^3.8.3",
     "react-router-dom": "^7.14.2",
     "recharts": "^3.8.1"
   },

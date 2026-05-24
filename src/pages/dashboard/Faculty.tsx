@@ -240,7 +240,11 @@ export default function Faculty() {
 
       {/* TABLE */}
       <Paper sx={{ mt: 4, p: 2, borderRadius: 3 }}>
-        <Typography variant="h6" mb={2}>
+        <Typography
+          variant="h6"
+          mb={2}
+          style={{ textAlign: "left", marginBottom: "10px" }}
+        >
           Faculty List
         </Typography>
 
