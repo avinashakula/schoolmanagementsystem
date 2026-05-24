@@ -629,37 +629,35 @@ export default function Students() {
       </Accordion>
 
       {/* TABLE */}
-      <Accordion defaultExpanded sx={{ mb: 3 }}>
-        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography variant="h6" fontWeight={600}>
-            Students List
-          </Typography>
-        </AccordionSummary>
-        <AccordionDetails sx={{ p: 0 }}>
-          <Paper sx={{ p: 2, mt: 4, borderRadius: 3 }}>
-            <Box sx={{ width: "100%" }}>
-              <div style={{ width: "100%" }}>
-                <DataGrid
-                  rows={students}
-                  columns={columns}
-                  getRowId={(row) => row.id}
-                  pageSizeOptions={[5, 10, 20]}
-                  initialState={{
-                    pagination: {
-                      paginationModel: { pageSize: 10, page: 0 },
-                    },
-                  }}
-                  slots={{ toolbar: GridToolbar }} // 🔥 filters + search
-                  slotProps={{
-                    toolbar: { showQuickFilter: true },
-                  }}
-                  // autoHeight
-                />
-              </div>
-            </Box>
-          </Paper>
-        </AccordionDetails>
-      </Accordion>
+      <Paper sx={{ p: 2, mt: 4, borderRadius: 3 }}>
+        <Typography
+          variant="h6"
+          mb={5}
+          style={{ textAlign: "left", marginBottom: "10px" }}
+        >
+          Students List
+        </Typography>
+        <Box sx={{ width: "100%" }}>
+          <div style={{ width: "100%" }}>
+            <DataGrid
+              rows={students}
+              columns={columns}
+              getRowId={(row) => row.id}
+              pageSizeOptions={[5, 10, 20]}
+              initialState={{
+                pagination: {
+                  paginationModel: { pageSize: 10, page: 0 },
+                },
+              }}
+              slots={{ toolbar: GridToolbar }} // 🔥 filters + search
+              slotProps={{
+                toolbar: { showQuickFilter: true },
+              }}
+              // autoHeight
+            />
+          </div>
+        </Box>
+      </Paper>
 
       <Dialog open={openFeeDialog} onClose={() => setOpenFeeDialog(false)}>
         <Box sx={{ p: 3 }}>
